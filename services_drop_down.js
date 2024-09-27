@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             item.classList.add('selected');
 
-            window.location.href = 'services.html';
+            window.location.href = 'https://levyug.github.io/Verify-First/services.html';
         });
     });
 });
