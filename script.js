@@ -2,8 +2,8 @@ function toggleFAQ(faqNumber) {
     const question = document.querySelector(`#faq${faqNumber}`);
     const arrow = question.previousElementSibling.querySelector(".arrow");
 
-    question.classList.toggle("show");  // Toggle answer visibility
-    arrow.textContent = question.classList.contains("show") ? '-' : '+';  // Toggle arrow between "+" and "-"
+    question.classList.toggle("show");
+    arrow.textContent = question.classList.contains("show") ? '∧' : '∨';
 }
 
 // JavaScript for toggling the navigation bar on mobile view
