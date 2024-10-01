@@ -51,14 +51,14 @@ header {
     color: #ff4d4d;
 }
 
-.login-button a {
+/* .login-button a {
     text-decoration: none;
     color: #fff;
     background-color: #ff4d4d;
     padding: 10px 20px;
     border-radius: 4px;
     font-weight: bold;
-}
+} */
 
 /* Hamburger Menu */
 .hamburger {
@@ -88,13 +88,13 @@ header {
 }
 
 .get-started-btn {
-    background-color: #ff4d4d;
+    background-color: #0f0f0f;
     border: none;
     color: white;
     border-radius: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 919px) {
     .nav-links {
         display: none;
         flex-direction: column;
