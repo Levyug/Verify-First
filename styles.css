@@ -948,87 +948,115 @@ input[type="text"] {
 }
 
 /* Client Feedback */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: 10px auto;
-    overflow: hidden;
+.client-feedback {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
 }
 
-.carousel-container h1 {
-    font-size: 40px;
+.client-feedback h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.carousel {
+.scroll-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
 }
 
 .feedback-card {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
+    flex: 0 0 300px;
+    margin-right: 20px;
+    padding: 30px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
 }
 
-.client-photo {
-    border-radius: 50%;
+.feedback-card h2 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    width: 80px;
-    height: 80px;
+    color: #333;
+    text-align: left;
+}
+
+.stars {
+    color: #f39c12;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.feedback-card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
 }
 
 .client-name {
-    font-size: 20px;
+    text-align: left;
+    font-size: 0.9rem;
     color: #333;
-    margin: 10px 0;
 }
 
-.client-review {
-    font-size: 16px;
-    color: #555;
+.client-name p {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
+.client-name span {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.client-photo {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    z-index: 1;
+    object-fit: cover;
+    margin-left: 20px;
+    /* Align the photo to the right */
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
+/* Responsive styles */
 @media (max-width: 768px) {
-    .carousel-container h1 {
-        font-size: 20px;
-        text-align: center;
+    .feedback-card {
+        flex: 0 0 250px;
+    }
+
+    .client-feedback h1 {
+        font-size: 2rem;
+    }
+
+    .client-photo {
+        width: 50px;
+        height: 50px;
     }
 }
 

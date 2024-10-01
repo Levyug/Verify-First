@@ -28,3 +28,33 @@ document.querySelectorAll('.why-question').forEach(button => {
         }
     });
 });
+
+//Client Feedback
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let index = 0;
+
+function showNextSlide() {
+    const totalCards = document.querySelectorAll('.feedback-card').length;
+    if (index < totalCards - 1) {
+        index++;
+    } else {
+        index = 0; // Loop back to the first slide
+    }
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function showPrevSlide() {
+    const totalCards = document.querySelectorAll('.feedback-card').length;
+    if (index > 0) {
+        index--;
+    } else {
+        index = totalCards - 1; // Loop to the last slide
+    }
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener('click', showNextSlide);
+prevBtn.addEventListener('click', showPrevSlide);
