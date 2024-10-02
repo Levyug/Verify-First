@@ -1990,8 +1990,8 @@ body {
 .sidebar ul li a:hover {
     background-color: #575757;
 }
-@media  (min-width:715px){
-    .sidebar{
-        display: none !important;
-    }
-}
+/*@media  (min-width:715px){*/
+/*    .sidebar{*/
+/*        display: none !important;*/
+/*    }*/
+/*}*/
