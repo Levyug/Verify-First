@@ -11,7 +11,22 @@ const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
 hamburger.addEventListener("click", () => {
-	navLinks.classList.toggle("active");
+	// navLinks.classList.toggle("active");
+	const element = document.querySelector(".sidebar");
+	const curr = element.getAttribute("open");
+	if (!curr){
+		element.style.display = "block";
+		element.setAttribute("open", "open");
+	}
+	else{
+		if (curr === "open"){
+			element.style.display = "none";
+			element.setAttribute("open", "closed");
+		}
+		else{
+			element.style.display = "block";element.setAttribute("open", "open");
+		}
+	}
 });
 
 //Why choose Verify First
@@ -58,3 +73,4 @@ function showPrevSlide() {
 
 nextBtn.addEventListener("click", showNextSlide);
 prevBtn.addEventListener("click", showPrevSlide);
+
