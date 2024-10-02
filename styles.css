@@ -1948,3 +1948,9 @@ body {
     
     
 }
+@media (max-width: 715px) {
+    .logo-gov {
+        height: 80px !important;
+        width: 80px !important;
+    }
+}
