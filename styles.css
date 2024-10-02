@@ -635,7 +635,7 @@ input[type="text"] {
     display: block;
     margin: 0 auto;
     position: relative;
-    top: 18%;
+    top: 350px;
 
 }
 
@@ -687,6 +687,7 @@ input[type="text"] {
 
     .mobile-image {
         display: block;
+        margin-top: 10%;
         
     }
 }
@@ -733,7 +734,7 @@ input[type="text"] {
     margin: 0px auto;
     background-color: #eefbff;
     border-radius: 15px;
-    margin-top: -35%;
+    
 }
 
 .star{
@@ -1596,6 +1597,25 @@ body {
         font-size: 40px;
         color: #ff4d4d;
     }
+
+    .text-container2{
+        padding: 20px;
+        width: 80%;
+    }
+    
+    .text-container2 h2{
+        font-size: 50px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    
+    .text-container2 p{
+        font-size: 20px;
+        color: #555;
+        font-family:   Arial, sans-serif;
+       
+        
+    }
     
 }
 
@@ -1889,6 +1909,7 @@ body {
         font-size: 40px;
         color: #ff4d4d;
     }
+    
     
     
 }
