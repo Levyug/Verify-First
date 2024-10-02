@@ -532,7 +532,7 @@ header {
     border-radius: 10px;
 }
 
-.text-container {
+/* .text-container {
     flex: 1;
     padding: 20px;
     padding-left: 70px;
@@ -552,7 +552,7 @@ header {
 .text-container span {
     font-size: 40px;
     color: #ff4d4d;
-}
+} */
 
 @media (max-width: 768px) {
     .content-section {
