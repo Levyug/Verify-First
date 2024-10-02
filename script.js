@@ -15,16 +15,17 @@ hamburger.addEventListener("click", () => {
 	const element = document.querySelector(".sidebar");
 	const curr = element.getAttribute("open");
 	if (!curr){
-		element.style.display = "block";
+		element.style.transform = "translateX(0px)";
 		element.setAttribute("open", "open");
 	}
 	else{
 		if (curr === "open"){
-			element.style.display = "none";
+			element.style.transform = "translateX(-100%)";
 			element.setAttribute("open", "closed");
 		}
 		else{
-			element.style.display = "block";element.setAttribute("open", "open");
+			element.style.transform = "translateX(0px)";
+			element.setAttribute("open", "open");
 		}
 	}
 });
