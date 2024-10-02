@@ -338,6 +338,7 @@ header {
     padding: 50px 20px;
     text-align: center;
     position: relative;
+    z-index: -1;
 }
 
 .whatsapp-section h2{
@@ -525,6 +526,7 @@ input[type="text"] {
 /* Services Section-------------------------------------------------------------------------------------------------------------- */
 .services {
     background-color: #fff;
+    z-index: -1;
 }
 
 .services h2 {
@@ -627,7 +629,8 @@ input[type="text"] {
     margin: 0 0 0 0;
     height: 95%;
    margin-top: -10%;
-   
+   position: relative;
+   z-index: -1;
    
 }
 
@@ -1137,6 +1140,7 @@ input[type="text"] {
     text-align: center;
     padding: 50px;
     background-color: #fff;
+
 }
 
 .client-feedback h1 {
@@ -1150,6 +1154,7 @@ input[type="text"] {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: 20px;
+    z-index: -1;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -1171,6 +1176,7 @@ input[type="text"] {
     text-align: left;
     position: relative;
     height: 400px;
+    
 }
 
 .feedback-card h2 {
