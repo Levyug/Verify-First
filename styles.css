@@ -244,7 +244,7 @@ header {
 	top: 25%;
 	left: 18%;
 	width: 150px;
-	opacity: 0;
+	opacity: 1;
 	width: 15%;
 }
 
@@ -389,7 +389,7 @@ header {
 .image-section img {
 	/* width: 500px; */
 	object-fit: cover;
-	z-index: 1000;
+	z-index: 1;
 	top: 8px;
 	position: relative;
 	object-position: center;
@@ -421,14 +421,15 @@ header {
 	border-radius: 35px;
 	padding: 25px 10px 20px 10px;
 	display: inline-block;
+	height: 700px;
 }
 
 .phone {
 	background-color: #ffffff;
-	border-radius: 45px;
+	/* border-radius: 45px; */
 
 	height: 500px;
-	width: 220px;
+	width: 280px;
 	/* Adjusted to smaller width */
 	position: relative;
 	margin: 0 auto;
@@ -491,7 +492,16 @@ input[type="text"] {
 	font-size: 0.9em;
 	cursor: pointer;
 }
-
+#dot {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0.8;
+	height: auto;
+	object-fit: cover;
+}
 /* Labels */
 .label {
 	position: absolute;
@@ -734,59 +744,40 @@ input[type="text"] {
 }
 
 .desktop-image {
+	width: 100%;
 	display: block;
 }
-
-.mobile-image {
-	display: none;
-}
-
 @media (max-width: 768px) {
+	.image-only2 {
+		margin-top: 0%;
+		position: relative;
+		padding: 0px;
+	}
 	.desktop-image {
-		display: none;
-	}
-
-	.tenant-text {
-		display: none;
-	}
-
-	.mobile-image {
-		display: block;
-		margin-top: 10%;
-	}
-}
-
-/* How it Works Section */
-.image-only {
-	text-align: center;
-}
-
-.desktop-image {
-	width: 100%;
-	height: 60%;
-}
-
-.mobile-image {
-	display: none;
-}
-
-@media (max-width: 768px) {
-	.image-only {
-		text-align: center;
-		margin: 5px;
-	}
-
-	.desktop-image {
-		display: none;
-	}
-
-	.mobile-image {
-		display: block;
+		object-fit: contain !important;
 		width: 100%;
 		height: auto;
 	}
+	.tenant-text h1 {
+		/* display: none; */
+		font-size: 20px;
+		margin-left: 0%;
+		text-align: center;
+		top: 0;
+	}
+	.tenant-text {
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		top: 200px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		left: 60px;
+	}
+	.tenant-text button {
+	}
 }
-
 /* Why choose Verify First */
 .why-choose-section {
 	display: flex;
@@ -2006,4 +1997,3 @@ body {
 	object-position: center;
 	height: 100%;
 }
-
