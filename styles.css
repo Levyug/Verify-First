@@ -294,9 +294,35 @@ header {
 	margin-bottom: 8px;
 	font-weight: 600;
 }
-
-.main-section h1 span {
+.test {
+	display: inline-flex;
+	align-items: start;
+	flex-direction: column;
+	gap: 0;
+	justify-content: center;
+}
+.test p {
+	height: 80px;
+}
+.test svg {
+	padding-left: 10px;
+}
+@media (max-width: 830px) {
+	.test svg {
+		display: none;
+	}
+	.test p {
+		height: fit-content;
+	}
+}
+.main-section h1 #first {
 	color: var(---main-font-color);
+}
+.main_wave {
+	position: absolute;
+	left: 27%;
+	top: 31%;
+	width: 200px;
 }
 
 @media (max-width: 768px) {
@@ -1966,13 +1992,15 @@ body {
 .mobile-verify {
 	background: white !important;
 	padding: 0 !important;
-	/* height: 80vh; */
+	/* height: 90vh; */
 	display: flex;
-	justify-content: end;
+	align-items: center;
+	justify-content: center;
 }
 .mobile-verify-image {
-	width: 100%;
+	width: auto; /* Maintain aspect ratio */
 	object-fit: cover;
+	max-height: 100%; /* Ensure the image doesn't exceed the section height */
 	object-position: center;
 	height: 100%;
 }
