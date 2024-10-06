@@ -166,6 +166,7 @@ header {
 
 .services {
 	position: relative;
+	box-shadow: 0px;
 }
 
 .dropdown {
@@ -614,7 +615,8 @@ input[type="text"] {
 
 .service {
 	background-color: #fff;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	transition: all ease-in-out 200ms;
 	padding: 20px;
 	text-align: center;
 	width: calc(25% - 40px);
@@ -1960,9 +1962,11 @@ body {
 /*        display: none !important;*/
 /*    }*/
 /*}*/
+/* mobile verify image section */
 .mobile-verify {
 	background: white !important;
 	padding: 0 !important;
+	/* height: 80vh; */
 	display: flex;
 	justify-content: end;
 }
