@@ -935,13 +935,15 @@ input[type="text"] {
 	display: flex;
 	align-items: center;
 	background-color: #fff;
+	justify-content: center;
 	padding: 90px;
 	border-radius: 8px;
+	gap: 0;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .values-heading {
-	flex: 1;
+	/* flex: 1; */
 	margin: 0;
 	font-size: 40px;
 	left: 100px;
@@ -952,6 +954,7 @@ input[type="text"] {
 	flex: 2;
 	margin: 0;
 	font-size: 20px;
+	max-width: 1000px;
 	color: #555;
 	padding-left: 140px;
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -1029,6 +1032,7 @@ input[type="text"] {
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
+	position: relative;
 	height: 80vh;
 	background-color: #fff;
 	background: #e1eff1;
@@ -1067,10 +1071,28 @@ input[type="text"] {
 
 .text-container {
 	flex: 1;
-	padding: 20px;
-	padding-left: 40px;
+	padding: 40px;
+	/* padding-left: 40px; */
 }
-
+#line_rating {
+	position: absolute;
+	left: -20px;
+	z-index: 40;
+	height: 80px;
+	width: 80px;
+	top: 80%;
+}
+#two_line_rating {
+	position: absolute;
+	right: 300px;
+	z-index: 40;
+	height: 50px;
+	width: 50px;
+	top: 90%;
+}
+.text-container img {
+	margin-top: 20px;
+}
 .text-container h2 {
 	font-size: 50px;
 	color: #333;
@@ -1080,10 +1102,9 @@ input[type="text"] {
 .text-container p {
 	font-size: 30px;
 	color: #555;
-
 	width: 60%;
-	margin-left: 20%;
-	margin-top: 5%;
+	/* margin-left: 20%; */
+	margin-top: 1%;
 }
 
 .rating p {
@@ -1219,7 +1240,15 @@ input[type="text"] {
 	position: relative;
 	height: 400px;
 }
-
+.feedback-card .top-section {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.feedback-card img {
+	height: 50px;
+	width: 50px;
+}
 .feedback-card h2 {
 	font-size: 1.5rem;
 	margin-bottom: 10px;
