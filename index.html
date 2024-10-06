@@ -1,938 +1,1020 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-    />
-    <title>Verify First</title>
-    <link
-            rel="stylesheet"
-            href="styles.css"
-    />
-    <link
-            rel="preconnect"
-            href="https://fonts.googleapis.com"
-    />
-    <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossorigin
-    />
-    <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet"
-    />
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Verify First</title>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-<body>
-<script src="services_drop_down.js"></script>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="logo">
+					<img
+						src="img/logo.png"
+						alt="Logo"
+					/>
+				</div>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <img
-                    src="img/logo.png"
-                    alt="Logo"
-            />
-        </div>
+				<ul
+					class="nav-links"
+					id="nav-links"
+				>
+					<li
+						id="home"
+						class="nav-link"
+					>
+						<a href="#home">Home</a>
+						<svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+					<li
+						id="services"
+						class="services nav-link"
+					>
+						<a
+							href="#"
+							id="services-button"
+							>Services &#x25BE;</a
+						>
+						<svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+						<div class="dropdown">
+							<div class="dropdown-column">
+								<a
+									href="https://levyug.com/"
+									class="dropdown-item"
+									>Verify Employee<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Verify driver<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Nanny<br /><span>Mobile-Friendly Verifications</span></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Cook<br /><span>Mobile-Friendly Verifications</span></a
+								>
+							</div>
+							<div class="dropdown-column">
+								<a
+									href="#"
+									class="dropdown-item"
+									>Domestic helper<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Tenant<br /><span>Mobile-Friendly Verifications</span></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Gig worker<br /><span>Mobile-Friendly Verifications</span></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Verify driver<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+							</div>
+							<div class="dropdown-column">
+								<a
+									href="#"
+									class="dropdown-item"
+									>Matrimonial verification<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Health care verification<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Any other profession<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+							</div>
+						</div>
+					</li>
+					<li
+						id="corporates"
+						class="nav-link"
+					>
+						<a href="#corporates">For Corporates</a>
+						<svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+					<li
+						id="contact"
+						class="nav-link"
+					>
+						<a href="#contact">Contact</a
+						><svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+					<li
+						id="pricing"
+						class="nav-link"
+					>
+						<a href="#pricing">Pricing</a
+						><svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+				</ul>
 
-        <ul
-                class="nav-links"
-                id="nav-links"
-        >
-            <li><a href="#home">Home</a></li>
-            <li class="services">
-                <a
-                        href="#"
-                        id="services-button"
-                >Services &#x25BE;</a
-                >
-                <div class="dropdown">
-                    <div class="dropdown-column">
-                        <a
-                                href="https://levyug.com/"
-                                class="dropdown-item"
-                        >Verify Employee<br/><span
-                        >Mobile-Friendly Verifications</span
-                        ></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Verify driver<br/><span
-                        >Mobile-Friendly Verifications</span
-                        ></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Nanny<br/><span>Mobile-Friendly Verifications</span></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Cook<br/><span>Mobile-Friendly Verifications</span></a
-                        >
-                    </div>
-                    <div class="dropdown-column">
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Domestic helper<br/><span
-                        >Mobile-Friendly Verifications</span
-                        ></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Tenant<br/><span>Mobile-Friendly Verifications</span></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Gig worker<br/><span>Mobile-Friendly Verifications</span></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Verify driver<br/><span
-                        >Mobile-Friendly Verifications</span
-                        ></a
-                        >
-                    </div>
-                    <div class="dropdown-column">
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Matrimonial verification<br/><span
-                        >Mobile-Friendly Verifications</span
-                        ></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Health care verification<br/><span
-                        >Mobile-Friendly Verifications</span
-                        ></a
-                        >
-                        <a
-                                href="#"
-                                class="dropdown-item"
-                        >Any other profession<br/><span
-                        >Mobile-Friendly Verifications</span
-                        ></a
-                        >
-                    </div>
-                </div>
-            </li>
-            <li><a href="#corporates">For Corporates</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-        </ul>
+				<div class="cta-buttons">
+					<button class="login-button">Login</button>
+				</div>
 
-        <div class="cta-buttons">
-            <button class="login-button">Login</button>
-        </div>
+				<!-- Hamburger Menu -->
+				<div
+					class="hamburger"
+					id="hamburger"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
 
-        <!-- Hamburger Menu -->
-        <div
-                class="hamburger"
-                id="hamburger"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-</header>
+		<section class="main-section">
+			<p class="get-start-p">Get started for free</p>
+			<h1>Verify, Track Employees</h1>
+			<h1>Seamlessly with <span>Verify First!</span></h1>
 
-<section class="main-section">
-    <p class="get-start-p">Get started for free</p>
-    <h1>Verify, Track Employees</h1>
-    <h1>Seamlessly with <span>Verify First!</span></h1>
+			<div class="cta-buttons">
+				<button class="get-started-btn">Get Started Now</button>
+				<button class="watch-btn">
+					<span> &#x25B7;</span> &nbsp; Watch How It Works
+				</button>
+			</div>
+			<p class="verification-count">Over 200+ Successful verification</p>
+			<div class="image-section">
+				<img
+					src="img/3d_illustration.png"
+					alt="Team Illustration"
+				/>
+			</div>
 
-    <div class="cta-buttons">
-        <button class="get-started-btn">Get Started Now</button>
-        <button class="watch-btn">
-            <span style="color: red"> &#x25B7;</span> &nbsp; Watch How It Works
-        </button>
-    </div>
-    <p class="verification-count">Over 200+ Successful verification</p>
-    <div class="image-section">
-        <img
-                src="img/3d_illustration.png"
-                alt="Team Illustration"
-        />
-    </div>
+			<div class="background-icons">
+				<img
+					src="img/rocket.png"
+					alt="Rocket Icon"
+					class="icon rocket-icon"
+				/>
+				<img
+					src="img/thunder.png"
+					alt="Thunder Icon"
+					class="icon thunder-icon"
+				/>
+				<img
+					src="img/star.png"
+					alt="Star Icon"
+					class="icon star-icon"
+				/>
+			</div>
+		</section>
 
-    <div class="background-icons">
-        <img
-                src="img/rocket.png"
-                alt="Rocket Icon"
-                class="icon rocket-icon"
-        />
-        <img
-                src="img/thunder.png"
-                alt="Thunder Icon"
-                class="icon thunder-icon"
-        />
-        <img
-                src="img/star.png"
-                alt="Star Icon"
-                class="icon star-icon"
-        />
-    </div>
-</section>
+		<!-- WhatsApp Integration Section -->
+		<section class="whatsapp-section">
+			<p class="get-start-p">Watsapp Integration</p>
+			<div class="background-icons">
+				<img
+					src="img/speed.png"
+					alt="Rocket Icon"
+					class="icon speed-icon"
+				/>
+				<img
+					src="img/rocket.png"
+					alt="Rocket Icon"
+					class="icon rocket-icon"
+				/>
+				<img
+					src="img/thunder.png"
+					alt="Thunder Icon"
+					class="icon thunder-icon"
+				/>
+			</div>
+			<h2>Mobile-Friendly Verifications</h2>
+			<div class="phone-border">
+				<p class="phone-title">WhatsApp Bot</p>
+				<div class="phone">
+					<div class="phone-header">
+						<div class="phone-notch"></div>
+					</div>
+					<div class="phone-content">
+						<input type="text" /> &nbsp;
+						<button class="send-button">Send</button>
+					</div>
+				</div>
+			</div>
 
-<!-- WhatsApp Integration Section -->
-<section class="whatsapp-section">
-    <p class="get-start-p">Watsapp Integration</p>
-    <div class="background-icons">
-        <img
-                src="img/speed.png"
-                alt="Rocket Icon"
-                class="icon speed-icon"
-        />
-        <img
-                src="img/rocket.png"
-                alt="Rocket Icon"
-                class="icon rocket-icon"
-        />
-        <img
-                src="img/thunder.png"
-                alt="Thunder Icon"
-                class="icon thunder-icon"
-        />
-    </div>
-    <h2>Mobile-Friendly Verifications</h2>
-    <div class="phone-border">
-        <p class="phone-title">WhatsApp Bot</p>
-        <div class="phone">
-            <div class="phone-header">
-                <div class="phone-notch"></div>
-            </div>
-            <div class="phone-content">
-                <input type="text"/> &nbsp;
-                <button class="send-button">Send</button>
-            </div>
-        </div>
-    </div>
+			<!-- Labels -->
+			<div class="label credit-check">
+				<p>Credit Check</p>
+			</div>
+			<div class="label quick-verification">
+				<p>Quick WhatsApp verification for a hassle-free experience</p>
+			</div>
+			<div class="label facial-verification">
+				<p>Facial verification with live image and ID image</p>
+			</div>
+			<div class="triangle"></div>
+			<div class="label instant-verification">
+				<p>Instant verification results</p>
+			</div>
+		</section>
 
-    <!-- Labels -->
-    <div class="label credit-check">
-        <p>Credit Check</p>
-    </div>
-    <div class="label quick-verification">
-        <p>Quick WhatsApp verification for a hassle-free experience</p>
-    </div>
-    <div class="label facial-verification">
-        <p>Facial verification with live image and ID image</p>
-    </div>
-    <div class="triangle"></div>
-    <div class="label instant-verification">
-        <p>Instant verification results</p>
-    </div>
-</section>
+		<!-- Services Section -->
+		<section class="services">
+			<h2>Our Services</h2>
+			<h1>Explore 10+ Verifications</h1>
+			<div class="service-grid">
+				<!-- Identity Check -->
+				<div class="service">
+					<img
+						src="img/services/remember_me.svg"
+						alt="Identity Check"
+					/>
+					<h3>Identity Check</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
+				<!-- Facial Verification -->
+				<div class="service">
+					<img
+						src="img/services/ar_on_you.svg"
+						alt="Facial Verification"
+					/>
+					<h3>Facial Verification with Live Image</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
+				<!-- Court and Criminal Check -->
+				<div class="service">
+					<img
+						src="img/services/gavel.svg"
+						alt="Court and Criminal Check"
+					/>
+					<h3>Court and Criminal Check</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
+				<!-- Address Verification -->
+				<div class="service">
+					<img
+						src="img/services/contact_mail.svg"
+						alt="Address Verification"
+					/>
+					<h3>Address Verification</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
+				<!-- Employment Verification -->
+				<div class="service">
+					<img
+						src="img/services/badge.svg"
+						alt="Employment Verification"
+					/>
+					<h3>Employment Verification</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
 
-<!-- Services Section -->
-<section class="services">
-    <h2>Our Services</h2>
-    <h1>Explore 10+ Verifications</h1>
-    <div class="service-grid">
-        <!-- Identity Check -->
-        <div class="service">
-            <img
-                    src="img/services/remember_me.svg"
-                    alt="Identity Check"
-            />
-            <h3>Identity Check</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
-        <!-- Facial Verification -->
-        <div class="service">
-            <img
-                    src="img/services/ar_on_you.svg"
-                    alt="Facial Verification"
-            />
-            <h3>Facial Verification with Live Image</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
-        <!-- Court and Criminal Check -->
-        <div class="service">
-            <img
-                    src="img/services/gavel.svg"
-                    alt="Court and Criminal Check"
-            />
-            <h3>Court and Criminal Check</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
-        <!-- Address Verification -->
-        <div class="service">
-            <img
-                    src="img/services/contact_mail.svg"
-                    alt="Address Verification"
-            />
-            <h3>Address Verification</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
-        <!-- Employment Verification -->
-        <div class="service">
-            <img
-                    src="img/services/badge.svg"
-                    alt="Employment Verification"
-            />
-            <h3>Employment Verification</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
+				<!-- Education Verification -->
+				<div class="service">
+					<img
+						src="img/services/school.svg"
+						alt="Education Verification"
+					/>
+					<h3>Education Verification</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
 
-        <!-- Education Verification -->
-        <div class="service">
-            <img
-                    src="img/services/school.svg"
-                    alt="Education Verification"
-            />
-            <h3>Education Verification</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
+				<!-- Credit Check -->
+				<div class="service">
+					<img
+						src="img/services/credit_score.svg"
+						alt="Credit Check"
+					/>
+					<h3>Credit Check</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
 
-        <!-- Credit Check -->
-        <div class="service">
-            <img
-                    src="img/services/credit_score.svg"
-                    alt="Credit Check"
-            />
-            <h3>Credit Check</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
+				<!-- Reference Check -->
+				<div class="service">
+					<img
+						src="img/services/settings_accessibility.svg"
+						alt="Reference Check"
+					/>
+					<h3>Reference Check</h3>
+					<p>Few Lines about the Occupation</p>
+				</div>
+			</div>
+		</section>
 
-        <!-- Reference Check -->
-        <div class="service">
-            <img
-                    src="img/services/settings_accessibility.svg"
-                    alt="Reference Check"
-            />
-            <h3>Reference Check</h3>
-            <p>Few Lines about the Occupation</p>
-        </div>
-    </div>
-</section>
+		<!-- How it Works -->
+		<div class="image-only1">
+			<img
+				src="img/How it works.png"
+				alt="Desktop Version"
+				class="desktop-image"
+			/>
+			<img
+				src="img/How it works.png"
+				alt="Mobile Version"
+				class="mobile-image"
+			/>
+		</div>
 
-<!-- How it Works -->
-<div class="image-only1">
-    <img
-            src="img/How it works.png"
-            alt="Desktop Version"
-            class="desktop-image"
-    />
-    <img
-            src="img/How it works.png"
-            alt="Mobile Version"
-            class="mobile-image"
-    />
-</div>
+		<!-- Achievements Section -->
+		<section class="metrics-container">
+			<div class="metric-tile">
+				<h2 style="color: #ff9f00">2000+</h2>
+				<p>Serviced</p>
+			</div>
+			<div class="metric-tile">
+				<h2 style="color: #00ddc7">123</h2>
+				<p>Country</p>
+			</div>
+			<div class="metric-tile">
+				<h2 style="color: #ff9d56">100+</h2>
+				<p>Verifications</p>
+			</div>
+			<div class="metric-tile">
+				<h2 style="color: #ff2222">918</h2>
+				<p>Successful Projects</p>
+			</div>
+		</section>
 
-<!-- Achievements Section -->
-<section class="metrics-container">
-    <div class="metric-tile">
-        <h2 style="color: #ff9f00">2000+</h2>
-        <p>Serviced</p>
-    </div>
-    <div class="metric-tile">
-        <h2 style="color: #00ddc7">123</h2>
-        <p>Country</p>
-    </div>
-    <div class="metric-tile">
-        <h2 style="color: #ff9d56">100+</h2>
-        <p>Verifications</p>
-    </div>
-    <div class="metric-tile">
-        <h2 style="color: #ff2222">918</h2>
-        <p>Successful Projects</p>
-    </div>
-</section>
+		<!-- India's First Tenant -->
+		<div class="image-only2">
+			<div class="tenant-text">
+				<h1>India's First Tenant Screening <br />Platform Available</h1>
+				<button class="login-button-white">Verify</button>
+			</div>
+			<img
+				src="img/India's First Tenant.png"
+				alt="Desktop Version"
+				class="desktop-image"
+			/>
+			<img
+				src="img/India's First Tenant mobile.png"
+				alt="Mobile Version"
+				class="mobile-image"
+			/>
+		</div>
 
-<!-- India's First Tenant -->
-<div class="image-only2">
-    <div class="tenant-text">
-        <h1>India's First Tenant Screening <br/>Platform Available</h1>
-        <button class="login-button-white">Verify</button>
-    </div>
-    <img
-            src="img/India's First Tenant.png"
-            alt="Desktop Version"
-            class="desktop-image"
-    />
-    <img
-            src="img/India's First Tenant mobile.png"
-            alt="Mobile Version"
-            class="mobile-image"
-    />
-</div>
+		<!-- Why choose verify first -->
+		<section class="why-choose-section">
+			<div class="left-cards">
+				<div class="left-card">
+					<img
+						src="img/Why choose us/Icon.png"
+						alt="Icon"
+						class="card-icon"
+					/>
+					<p>Simplified process with real-time results</p>
+				</div>
+				<div class="right-card">
+					<img
+						src="img/Why choose us/Icon.png"
+						alt="Icon"
+						class="card-icon"
+					/>
+					<p>Aadhaar, criminal, education, and more</p>
+				</div>
+				<div class="left-card">
+					<img
+						src="img/Why choose us/Icon 2.png"
+						alt="Icon"
+						class="card-icon"
+					/>
+					<p>Built with privacy and security standards in mind</p>
+				</div>
+				<div class="right-card">
+					<img
+						src="img/Why choose us/Icon 2.png"
+						alt="Icon"
+						class="card-icon"
+					/>
+					<p>Easy to navigate for both employers and workers</p>
+				</div>
+			</div>
 
-<!-- Why choose verify first -->
-<section class="why-choose-section">
-    <div class="left-cards">
-        <div class="left-card">
-            <img
-                    src="img/Why choose us/Icon.png"
-                    alt="Icon"
-                    class="card-icon"
-            />
-            <p>Simplified process with real-time results</p>
-        </div>
-        <div class="right-card">
-            <img
-                    src="img/Why choose us/Icon.png"
-                    alt="Icon"
-                    class="card-icon"
-            />
-            <p>Aadhaar, criminal, education, and more</p>
-        </div>
-        <div class="left-card">
-            <img
-                    src="img/Why choose us/Icon 2.png"
-                    alt="Icon"
-                    class="card-icon"
-            />
-            <p>Built with privacy and security standards in mind</p>
-        </div>
-        <div class="right-card">
-            <img
-                    src="img/Why choose us/Icon 2.png"
-                    alt="Icon"
-                    class="card-icon"
-            />
-            <p>Easy to navigate for both employers and workers</p>
-        </div>
-    </div>
+			<div class="right-content">
+				<img
+					src="img/smiley-star.svg"
+					class="star"
+				/>
+				<h1>Services</h1>
+				<h2>Why Choose Verify First?</h2>
+				<div class="faq-item">
+					<div
+						class="faq-question"
+						onclick="toggleFAQ(1)"
+					>
+						<img
+							src="img/Why choose us/faq1.png"
+							alt="img"
+						/>
+						<h3>Fast and Efficient Verification</h3>
+						<span class="arrow">∨</span>
+					</div>
+					<div
+						class="faq-answer"
+						id="faq1"
+					>
+						<p>Built with privacy and security standards in mind</p>
+					</div>
+				</div>
 
-    <div class="right-content">
-        <img
-                src="img/smiley-star.svg"
-                class="star"
-        />
-        <h1>Services</h1>
-        <h2>Why Choose Verify First?</h2>
-        <div class="faq-item">
-            <div
-                    class="faq-question"
-                    onclick="toggleFAQ(1)"
-            >
-                <img
-                        src="img/Why choose us/faq1.png"
-                        alt="img"
-                />
-                <h3>Fast and Efficient Verification</h3>
-                <span class="arrow">∨</span>
-            </div>
-            <div
-                    class="faq-answer"
-                    id="faq1"
-            >
-                <p>Built with privacy and security standards in mind</p>
-            </div>
-        </div>
+				<div class="faq-item">
+					<div
+						class="faq-question"
+						onclick="toggleFAQ(2)"
+					>
+						<img
+							src="img/Why choose us/faq2.png"
+							alt="img"
+						/>
+						<h3>Secure and Compliant</h3>
+						<span class="arrow">∨</span>
+					</div>
+					<div
+						class="faq-answer"
+						id="faq2"
+					>
+						<p>Built with privacy and security standards in mind</p>
+					</div>
+				</div>
 
-        <div class="faq-item">
-            <div
-                    class="faq-question"
-                    onclick="toggleFAQ(2)"
-            >
-                <img
-                        src="img/Why choose us/faq2.png"
-                        alt="img"
-                />
-                <h3>Secure and Compliant</h3>
-                <span class="arrow">∨</span>
-            </div>
-            <div
-                    class="faq-answer"
-                    id="faq2"
-            >
-                <p>Built with privacy and security standards in mind</p>
-            </div>
-        </div>
+				<div class="faq-item">
+					<div
+						class="faq-question"
+						onclick="toggleFAQ(3)"
+					>
+						<img
+							src="img/Why choose us/faq3.png"
+							alt="img"
+						/>
+						<h3>User Friendly Interface</h3>
+						<span class="arrow">∨</span>
+					</div>
+					<div
+						class="faq-answer"
+						id="faq3"
+					>
+						<p>Built with privacy and security standards in mind</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <div class="faq-item">
-            <div
-                    class="faq-question"
-                    onclick="toggleFAQ(3)"
-            >
-                <img
-                        src="img/Why choose us/faq3.png"
-                        alt="img"
-                />
-                <h3>User Friendly Interface</h3>
-                <span class="arrow">∨</span>
-            </div>
-            <div
-                    class="faq-answer"
-                    id="faq3"
-            >
-                <p>Built with privacy and security standards in mind</p>
-            </div>
-        </div>
-    </div>
-</section>
+		<!-- Values and Mission Section -->
+		<section class="values-mission">
+			<div class="values-container">
+				<h1 class="values-heading">Our Values & Mission</h1>
+				<p class="values-content">
+					To revolutionize the background verification and on boarding process
+					by providing innovative and reliable HR technology solutions that
+					streamline the hiring process for employers and ensure the privacy and
+					security of candidate information.
+				</p>
+			</div>
 
-<!-- Values and Mission Section -->
-<section class="values-mission">
-    <div class="values-container">
-        <h1 class="values-heading">Our Values & Mission</h1>
-        <p class="values-content">
-            To revolutionize the background verification and on boarding process
-            by providing innovative and reliable HR technology solutions that
-            streamline the hiring process for employers and ensure the privacy and
-            security of candidate information.
-        </p>
-    </div>
+			<!-- Logos Section -->
+			<div class="logos-container">
+				<div class="logos">
+					<img
+						src="img/logos/1.png"
+						alt="Image 1"
+						class="logo-gov"
+					/>
+					<img
+						src="img/logos/2.png"
+						alt="Image 2"
+						class="logo-gov"
+					/>
+					<img
+						src="img/logos/3.png"
+						alt="Image 3"
+						class="logo-gov"
+					/>
+					<img
+						src="img/logos/4.png"
+						alt="Image 4"
+						class="logo-gov"
+					/>
+					<img
+						src="img/logos/5.png"
+						alt="Image 5"
+						class="logo-gov"
+					/>
+				</div>
+			</div>
+		</section>
 
-    <!-- Logos Section -->
-    <div class="logos-container">
-        <div class="logos">
-            <img
-                    src="img/logos/1.png"
-                    alt="Image 1"
-                    class="logo-gov"
-            />
-            <img
-                    src="img/logos/2.png"
-                    alt="Image 2" class="logo-gov"
+		<!-- Yourself -->
+		<section
+			class="content-section"
+			style="background-color: #fff"
+		>
+			<div class="text-container">
+				<h2>
+					Check out how we<br />
+					work verify <span>Yourself</span>
+				</h2>
+				<p>
+					We've 9,000 Verified Workers around the country, find workers near
+					your neighborhood.
+				</p>
+				<div class="rating">
+					<p>
+						<span class="rate">4.8</span><br />
+						avg rating
+					</p>
+				</div>
+			</div>
+			<div class="image-container">
+				<img
+					src="img/Yourself.png"
+					alt="Sample Image"
+				/>
+			</div>
+		</section>
+		<!--sidebar-->
+		<aside class="sidebar">
+			<h2>Verify First</h2>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</aside>
+		<!-- Try it Free -->
+		<section class="content-section">
+			<div class="image-container">
+				<img
+					src="img/Try it free.png"
+					alt="Sample Image"
+				/>
+			</div>
+			<div class="text-container2">
+				<h2>Try it free</h2>
+				<p>
+					If you've made it this far, you must be at least a little curious.
+					connect and take the first step toward your goals.
+				</p>
+				<button class="login-button2">Connect Now</button>
+			</div>
+		</section>
 
-            />
-            <img
-                    src="img/logos/3.png"
-                    alt="Image 3" class="logo-gov"
+		<!-- Client Feedback -->
+		<section class="client-feedback">
+			<h1>Client Feedback</h1>
+			<div class="scroll-container">
+				<div class="feedback-card">
+					<h2>Very Solid!!</h2>
+					<div class="stars">★★★★★</div>
+					<p>
+						They not only understand what I say but read between the lines and
+						also give me ideas of my own.
+					</p>
+					<div class="client-info">
+						<div class="client-name">
+							<p>Rashed Kabir</p>
+							<span>California</span>
+						</div>
+						<img
+							src="img/client/1.png"
+							alt="Client photo"
+							class="client-photo"
+						/>
+					</div>
+				</div>
+				<div class="feedback-card">
+					<h2>Impressive!</h2>
+					<div class="stars">★★★★★</div>
+					<p>
+						One should not hesitate to work with them, unlikely as they may seem
+						at first.
+					</p>
+					<div class="client-info">
+						<div class="client-name">
+							<p>Zubayer Al Hasan</p>
+							<span>Dhaka</span>
+						</div>
+						<img
+							src="img/client/2.png"
+							alt="Client photo"
+							class="client-photo"
+						/>
+					</div>
+				</div>
+				<div class="feedback-card">
+					<h2>Very Solid!!</h2>
+					<div class="stars">★★★★★</div>
+					<p>
+						They not only understand what I say but read between the lines and
+						also give me ideas of my own.
+					</p>
+					<div class="client-info">
+						<div class="client-name">
+							<p>Rashed Kabir</p>
+							<span>California</span>
+						</div>
+						<img
+							src="img/client/1.png"
+							alt="Client photo"
+							class="client-photo"
+						/>
+					</div>
+				</div>
+				<div class="feedback-card">
+					<h2>Very Solid!!</h2>
+					<div class="stars">★★★★★</div>
+					<p>
+						They not only understand what I say but read between the lines and
+						also give me ideas of my own.
+					</p>
+					<div class="client-info">
+						<div class="client-name">
+							<p>Rashed Kabir</p>
+							<span>California</span>
+						</div>
+						<img
+							src="img/client/1.png"
+							alt="Client photo"
+							class="client-photo"
+						/>
+					</div>
+				</div>
+				<div class="feedback-card">
+					<h2>Very Solid!!</h2>
+					<div class="stars">★★★★★</div>
+					<p>
+						They not only understand what I say but read between the lines and
+						also give me ideas of my own.
+					</p>
+					<div class="client-info">
+						<div class="client-name">
+							<p>Rashed Kabir</p>
+							<span>California</span>
+						</div>
+						<img
+							src="img/client/1.png"
+							alt="Client photo"
+							class="client-photo"
+						/>
+					</div>
+				</div>
+				<!-- Add more feedback cards here -->
+			</div>
+		</section>
 
-            />
-            <img
-                    src="img/logos/4.png"
-                    alt="Image 4" class="logo-gov"
+		<!-- FAQ Section -->
+		<section class="faq-section">
+			<h1>Frequently Asked Questions</h1>
+			<p style="text-align: center">
+				Everything you need to know about the product and billing.
+			</p>
 
-            />
-            <img
-                    src="img/logos/5.png"
-                    alt="Image 5" class="logo-gov"
-            />
-        </div>
-    </div>
-</section>
+			<div class="faq-container">
+				<!-- Question 1 -->
+				<div class="faq-item">
+					<div
+						class="faq-question"
+						onclick="toggleFAQ(4)"
+					>
+						<h3>How does WhatsApp verification work?</h3>
+						<span class="arrow">∨</span>
+					</div>
+					<div
+						class="faq-answer"
+						id="faq4"
+					>
+						<p>
+							Yes, you can try us for free for 30 days. If you want, we'll
+							provide you with a free personalized 30-minute call to get you up
+							and running as soon as possible.
+						</p>
+					</div>
+				</div>
 
-<!-- Yourself -->
-<section
-        class="content-section"
-        style="background-color: #fff"
->
-    <div class="text-container">
-        <h2>
-            Check out how we<br/>
-            work verify <span>Yourself</span>
-        </h2>
-        <p>
-            We've 9,000 Verified Workers around the country, find workers near
-            your neighborhood.
-        </p>
-        <div class="rating">
-            <p>
-                <span class="rate">4.8</span><br/>
-                avg rating
-            </p>
-        </div>
-    </div>
-    <div class="image-container">
-        <img
-                src="img/Yourself.png"
-                alt="Sample Image"
-        />
-    </div>
-</section>
-<!--sidebar-->
-<aside class="sidebar">
-    <h2>Verify First</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</aside>
-<!-- Try it Free -->
-<section class="content-section">
-    <div class="image-container">
-        <img
-                src="img/Try it free.png"
-                alt="Sample Image"
-        />
-    </div>
-    <div class="text-container2">
-        <h2>Try it free</h2>
-        <p>
-            If you've made it this far, you must be at least a little curious.
-            connect and take the first step toward your goals.
-        </p>
-        <button class="login-button2">Connect Now</button>
-    </div>
-</section>
+				<!-- Question 2 -->
+				<div class="faq-item">
+					<div
+						class="faq-question"
+						onclick="toggleFAQ(5)"
+					>
+						<h3>What documents are needed for verification?</h3>
+						<span class="arrow">∨</span>
+					</div>
+					<div
+						class="faq-answer"
+						id="faq5"
+					>
+						<p>
+							You'll need an official government-issued ID, such as a passport
+							or a driver's license, and a recent utility bill to verify your
+							address.
+						</p>
+					</div>
+				</div>
 
-<!-- Client Feedback -->
-<section class="client-feedback">
-    <h1>Client Feedback</h1>
-    <div class="scroll-container">
-        <div class="feedback-card">
-            <h2>Very Solid!!</h2>
-            <div class="stars">★★★★★</div>
-            <p>
-                They not only understand what I say but read between the lines and
-                also give me ideas of my own.
-            </p>
-            <div class="client-info">
-                <div class="client-name">
-                    <p>Rashed Kabir</p>
-                    <span>California</span>
-                </div>
-                <img
-                        src="img/client/1.png"
-                        alt="Client photo"
-                        class="client-photo"
-                />
-            </div>
-        </div>
-        <div class="feedback-card">
-            <h2>Impressive!</h2>
-            <div class="stars">★★★★★</div>
-            <p>
-                One should not hesitate to work with them, unlikely as they may seem
-                at first.
-            </p>
-            <div class="client-info">
-                <div class="client-name">
-                    <p>Zubayer Al Hasan</p>
-                    <span>Dhaka</span>
-                </div>
-                <img
-                        src="img/client/2.png"
-                        alt="Client photo"
-                        class="client-photo"
-                />
-            </div>
-        </div>
-        <div class="feedback-card">
-            <h2>Very Solid!!</h2>
-            <div class="stars">★★★★★</div>
-            <p>
-                They not only understand what I say but read between the lines and
-                also give me ideas of my own.
-            </p>
-            <div class="client-info">
-                <div class="client-name">
-                    <p>Rashed Kabir</p>
-                    <span>California</span>
-                </div>
-                <img
-                        src="img/client/1.png"
-                        alt="Client photo"
-                        class="client-photo"
-                />
-            </div>
-        </div>
-        <div class="feedback-card">
-            <h2>Very Solid!!</h2>
-            <div class="stars">★★★★★</div>
-            <p>
-                They not only understand what I say but read between the lines and
-                also give me ideas of my own.
-            </p>
-            <div class="client-info">
-                <div class="client-name">
-                    <p>Rashed Kabir</p>
-                    <span>California</span>
-                </div>
-                <img
-                        src="img/client/1.png"
-                        alt="Client photo"
-                        class="client-photo"
-                />
-            </div>
-        </div>
-        <div class="feedback-card">
-            <h2>Very Solid!!</h2>
-            <div class="stars">★★★★★</div>
-            <p>
-                They not only understand what I say but read between the lines and
-                also give me ideas of my own.
-            </p>
-            <div class="client-info">
-                <div class="client-name">
-                    <p>Rashed Kabir</p>
-                    <span>California</span>
-                </div>
-                <img
-                        src="img/client/1.png"
-                        alt="Client photo"
-                        class="client-photo"
-                />
-            </div>
-        </div>
-        <!-- Add more feedback cards here -->
-    </div>
-</section>
+				<!-- Question 3 -->
+				<div class="faq-item">
+					<div
+						class="faq-question"
+						onclick="toggleFAQ(6)"
+					>
+						<h3>How long does verification take?</h3>
+						<span class="arrow">∨</span>
+					</div>
+					<div
+						class="faq-answer"
+						id="faq6"
+					>
+						<p>
+							Verification typically takes anywhere from 5 minutes to 24 hours
+							depending on the documents provided.
+						</p>
+					</div>
+				</div>
 
-<!-- FAQ Section -->
-<section class="faq-section">
-    <h1>Frequently Asked Questions</h1>
-    <p style="text-align: center">
-        Everything you need to know about the product and billing.
-    </p>
+				<!-- Question 4 -->
+				<div class="faq-item">
+					<div
+						class="faq-question"
+						onclick="toggleFAQ(7)"
+					>
+						<h3>Can other info be added to an invoice?</h3>
+						<span class="arrow">∨</span>
+					</div>
+					<div
+						class="faq-answer"
+						id="faq7"
+					>
+						<p>
+							Yes, you can include additional information such as a purchase
+							order number, VAT number, or any other billing-related details.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <div class="faq-container">
-        <!-- Question 1 -->
-        <div class="faq-item">
-            <div
-                    class="faq-question"
-                    onclick="toggleFAQ(4)"
-            >
-                <h3>How does WhatsApp verification work?</h3>
-                <span class="arrow">∨</span>
-            </div>
-            <div
-                    class="faq-answer"
-                    id="faq4"
-            >
-                <p>
-                    Yes, you can try us for free for 30 days. If you want, we'll
-                    provide you with a free personalized 30-minute call to get you up
-                    and running as soon as possible.
-                </p>
-            </div>
-        </div>
+		<!-- Contact Us Form -->
+		<section class="contact">
+			<div class="contact-box">
+				<h2>Contact Us</h2>
+				<h3>Ready To Explore Verify First</h3>
+				<form class="contact-form">
+					<div class="form-group">
+						<label for="name">Name*</label>
+						<input
+							type="text"
+							id="name"
+							placeholder="Enter your name"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<label for="mobile">Mobile No*</label>
+						<input
+							type="tel"
+							id="mobile"
+							placeholder="+91 92849-20292"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<label for="email">Email*</label>
+						<input
+							type="email"
+							id="email"
+							placeholder="example@gmail.com"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<label for="message">Your Message*</label>
+						<textarea
+							id="message"
+							rows="4"
+							placeholder="Type your message here"
+							required
+						></textarea>
+					</div>
+					<button
+						type="submit"
+						class="submit-btn"
+					>
+						Submit
+					</button>
+				</form>
+			</div>
+		</section>
 
-        <!-- Question 2 -->
-        <div class="faq-item">
-            <div
-                    class="faq-question"
-                    onclick="toggleFAQ(5)"
-            >
-                <h3>What documents are needed for verification?</h3>
-                <span class="arrow">∨</span>
-            </div>
-            <div
-                    class="faq-answer"
-                    id="faq5"
-            >
-                <p>
-                    You'll need an official government-issued ID, such as a passport
-                    or a driver's license, and a recent utility bill to verify your
-                    address.
-                </p>
-            </div>
-        </div>
+		<!-- Footer Section -->
+		<footer class="footer">
+			<div class="footer-container">
+				<!-- Left Side - Logo and Description -->
+				<div class="footer-left">
+					<img
+						src="img/logo.png"
+						alt="Verify First Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-desc">
+						If you've made it this far, you must be at least a little curious.
+						Connect and take the first step toward your goals.
+					</p>
 
-        <!-- Question 3 -->
-        <div class="faq-item">
-            <div
-                    class="faq-question"
-                    onclick="toggleFAQ(6)"
-            >
-                <h3>How long does verification take?</h3>
-                <span class="arrow">∨</span>
-            </div>
-            <div
-                    class="faq-answer"
-                    id="faq6"
-            >
-                <p>
-                    Verification typically takes anywhere from 5 minutes to 24 hours
-                    depending on the documents provided.
-                </p>
-            </div>
-        </div>
+					<div class="footer-social-icons">
+						<a href="#"
+							><img
+								src="img/footer/facebook.png"
+								alt="Facebook"
+						/></a>
+						<a href="#"
+							><img
+								src="img/footer/twitter.png"
+								alt="Twitter"
+						/></a>
+						<a href="#"
+							><img
+								src="img/footer/youtube.png"
+								alt="YouTube"
+						/></a>
+						<a href="#"
+							><img
+								src="img/footer/dribble.png"
+								alt="Dribbble"
+						/></a>
+					</div>
+				</div>
 
-        <!-- Question 4 -->
-        <div class="faq-item">
-            <div
-                    class="faq-question"
-                    onclick="toggleFAQ(7)"
-            >
-                <h3>Can other info be added to an invoice?</h3>
-                <span class="arrow">∨</span>
-            </div>
-            <div
-                    class="faq-answer"
-                    id="faq7"
-            >
-                <p>
-                    Yes, you can include additional information such as a purchase
-                    order number, VAT number, or any other billing-related details.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+				<!-- Center - Web Links -->
+				<div class="footer-center">
+					<h3>Web Links</h3>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+					</ul>
+				</div>
 
-<!-- Contact Us Form -->
-<section class="contact">
-    <div class="contact-box">
-        <h2>Contact Us</h2>
-        <h3>Ready To Explore Verify First</h3>
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Name*</label>
-                <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your name"
-                        required
-                />
-            </div>
-            <div class="form-group">
-                <label for="mobile">Mobile No*</label>
-                <input
-                        type="tel"
-                        id="mobile"
-                        placeholder="+91 92849-20292"
-                        required
-                />
-            </div>
-            <div class="form-group">
-                <label for="email">Email*</label>
-                <input
-                        type="email"
-                        id="email"
-                        placeholder="example@gmail.com"
-                        required
-                />
-            </div>
-            <div class="form-group">
-                <label for="message">Your Message*</label>
-                <textarea
-                        id="message"
-                        rows="4"
-                        placeholder="Type your message here"
-                        required
-                ></textarea>
-            </div>
-            <button
-                    type="submit"
-                    class="submit-btn"
-            >
-                Submit
-            </button>
-        </form>
-    </div>
-</section>
+				<!-- Right Side - Address and Contact Info -->
+				<div class="footer-right">
+					<h3>Address</h3>
+					<p>243 Vipul Trade Centre, Sector 48, Gurgaon, HR 122018, India</p>
+					<p>
+						<a
+							href="mailto:info@verifyfirst.com"
+							class="email"
+							><img
+								src="img/footer/mail.png"
+								alt="Email"
+							/>
+							info@verifyfirst.com</a
+						>
+					</p>
+					<p>
+						<a
+							href="tel:+91-769942478"
+							class="support"
+							><img
+								src="img/footer/phone.png"
+								alt="Phone"
+							/>
+							+91 76990-42478</a
+						>
+					</p>
+					<p>
+						<a
+							href="mailto:support@verifynow.com"
+							class="support"
+							><img
+								src="img/footer/mail.png"
+								alt="Support"
+							/>
+							support@verifynow.com</a
+						>
+					</p>
+				</div>
+				<div class="background-icons">
+					<img
+						src="img/rocket.png"
+						alt="Rocket Icon"
+						class="icon rocket-icon"
+					/>
+					<img
+						src="img/thunder.png"
+						alt="Thunder Icon"
+						class="icon thunder-icon"
+					/>
+				</div>
+			</div>
+		</footer>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-container">
-        <!-- Left Side - Logo and Description -->
-        <div class="footer-left">
-            <img
-                    src="img/logo.png"
-                    alt="Verify First Logo"
-                    class="footer-logo"
-            />
-            <p class="footer-desc">
-                If you've made it this far, you must be at least a little curious.
-                Connect and take the first step toward your goals.
-            </p>
-
-            <div class="footer-social-icons">
-                <a href="#"
-                ><img
-                        src="img/footer/facebook.png"
-                        alt="Facebook"
-                /></a>
-                <a href="#"
-                ><img
-                        src="img/footer/twitter.png"
-                        alt="Twitter"
-                /></a>
-                <a href="#"
-                ><img
-                        src="img/footer/youtube.png"
-                        alt="YouTube"
-                /></a>
-                <a href="#"
-                ><img
-                        src="img/footer/dribble.png"
-                        alt="Dribbble"
-                /></a>
-            </div>
-        </div>
-
-        <!-- Center - Web Links -->
-        <div class="footer-center">
-            <h3>Web Links</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-        </div>
-
-        <!-- Right Side - Address and Contact Info -->
-        <div class="footer-right">
-            <h3>Address</h3>
-            <p>243 Vipul Trade Centre, Sector 48, Gurgaon, HR 122018, India</p>
-            <p>
-                <a
-                        href="mailto:info@verifyfirst.com"
-                        class="email"
-                ><img
-                        src="img/footer/mail.png"
-                        alt="Email"
-                />
-                    info@verifyfirst.com</a
-                >
-            </p>
-            <p>
-                <a
-                        href="tel:+91-769942478"
-                        class="support"
-                ><img
-                        src="img/footer/phone.png"
-                        alt="Phone"
-                />
-                    +91 76990-42478</a
-                >
-            </p>
-            <p>
-                <a
-                        href="mailto:support@verifynow.com"
-                        class="support"
-                ><img
-                        src="img/footer/mail.png"
-                        alt="Support"
-                />
-                    support@verifynow.com</a
-                >
-            </p>
-        </div>
-        <div class="background-icons">
-            <img
-                    src="img/rocket.png"
-                    alt="Rocket Icon"
-                    class="icon rocket-icon"
-            />
-            <img
-                    src="img/thunder.png"
-                    alt="Thunder Icon"
-                    class="icon thunder-icon"
-            />
-        </div>
-    </div>
-</footer>
-
-<div class="footer-bottom">
-    <p>&copy; 2024 Levyug Pvt Ltd. All Rights Reserved</p>
-</div>
-<script src="script.js"></script>
-
-</body>
+		<div class="footer-bottom">
+			<p>&copy; 2024 Levyug Pvt Ltd. All Rights Reserved</p>
+		</div>
+		<script src="script.js"></script>
+		<script src="services_drop_down.js"></script>
+	</body>
 </html>
