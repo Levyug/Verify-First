@@ -78,7 +78,6 @@ const links = new Map();
 
 links.set("/", "home");
 links.set("home", "home");
-
 links.set("corporates", "corporates");
 links.set("contact", "contact");
 links.set("pricing", "pricing");
