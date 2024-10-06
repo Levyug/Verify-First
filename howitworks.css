@@ -51,6 +51,18 @@
 	z-index: 20;
 	padding: 40px;
 }
+#asap {
+	position: absolute;
+	right: -40px;
+	width: 80px;
+	z-index: 40;
+	height: 80px;
+	top: -40px;
+}
+#cardTop {
+	width: 80px;
+	height: 80px;
+}
 .card1 {
 	background-image: url("img/cardBlue.png");
 	transform: rotate(10deg);
@@ -77,7 +89,7 @@
 }
 
 @media (max-width: 768px) {
-	.htw-image-div img {
+	.htw-image-div #main_bg_htw {
 		width: 100%;
 		height: 100%;
 		left: 0;
@@ -87,14 +99,14 @@
 	}
 
 	.container-cards {
-		position: inherit;
+		position: relative;
 		width: 100%;
 		/* height: 100vh; */
 		display: flex;
 		left: 0%;
 		gap: 20px;
 		align-items: center;
-		margin-top: 20px;
+		margin-top: 40px;
 		justify-content: center;
 		top: 0%;
 		flex-direction: column;
@@ -105,6 +117,7 @@
 		height: 300px;
 		display: flex;
 		flex-direction: column;
+		position: relative;
 		gap: 10px;
 		z-index: 20;
 		padding: 40px;
