@@ -1,0 +1,130 @@
+.how-it-works {
+	min-height: 140vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+	margin-top: 40px;
+	justify-content: start;
+	padding-top: 40px;
+}
+.how-it-works h1 {
+	font-weight: 500;
+	font-size: 40px;
+}
+.how-it-works h3 {
+	font-weight: 400;
+	font-size: 20px;
+}
+.htw-image-div {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.htw-image-div img {
+	width: 1300px;
+	max-width: 1300px;
+	top: 0px;
+	height: 100%;
+	left: 18%;
+	z-index: 10;
+}
+
+.container-cards {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 30%;
+	top: 20%;
+}
+.card {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	position: relative;
+	z-index: 20;
+	padding: 40px;
+}
+.card1 {
+	background-image: url("img/cardBlue.png");
+	transform: rotate(10deg);
+}
+.card2 {
+	background: #fff29e;
+	transform: rotate(-10deg);
+	position: relative;
+	left: 30%;
+}
+.card3 {
+	background-image: url("img/step3.png");
+}
+.card #stepText {
+	color: #ea5824;
+	font-weight: 600;
+	font-size: 30px;
+}
+.card h2 {
+	font-size: 25px;
+}
+.card ul {
+	padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+	.htw-image-div img {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		display: none;
+		object-position: center;
+	}
+
+	.container-cards {
+		position: inherit;
+		width: 100%;
+		/* height: 100vh; */
+		display: flex;
+		left: 0%;
+		gap: 20px;
+		align-items: center;
+		margin-top: 20px;
+		justify-content: center;
+		top: 0%;
+		flex-direction: column;
+	}
+
+	.card {
+		width: 300px;
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		z-index: 20;
+		padding: 40px;
+	}
+	.card1 {
+		background-image: url("img/cardBlue.png");
+		transform: rotate(0deg);
+		left: 0;
+	}
+	.card2 {
+		background: #fff29e;
+		transform: rotate(0deg);
+		position: relative;
+		left: 0;
+	}
+	.card3 {
+		background-image: url("img/step3.png");
+	}
+	.how-it-works {
+		min-height: 100vh;
+		margin-bottom: 0px;
+	}
+}
