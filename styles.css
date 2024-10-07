@@ -1537,13 +1537,31 @@ body {
 
 /* Footer Styles */
 .footer {
-	background-color: #fff;
+	background-color: #eefbff;
 	padding: 40px 0;
 	font-size: 14px;
+	position: relative;
 	color: #333;
 	margin-top: 30px;
 }
-
+#lightninggroup {
+	position: absolute;
+	z-index: 20;
+	top: -80px;
+	left: 80%;
+}
+#lightningStar {
+	position: absolute;
+	right: 19%;
+	top: 20px;
+	opacity: 0.5;
+}
+#lightningStar2 {
+	position: absolute;
+	right: 60%;
+	opacity: 0.5;
+	top: 40px;
+}
 .footer-container {
 	max-width: 1200px;
 	margin: auto;
@@ -1644,6 +1662,10 @@ body {
 
 .footer-bottom {
 	text-align: center;
+	background: #eefbff;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding-bottom: 20px;
 	padding-top: 20px;
 	border-top: 1px solid #ccc;
 }
@@ -1657,6 +1679,10 @@ body {
 @media (max-width: 768px) {
 	.footer {
 		display: none;
+	}
+	.footer-bottom {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
