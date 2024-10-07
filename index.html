@@ -1178,6 +1178,23 @@
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
 				},
+				breakpoints: {
+					// when window width is >= 1024px
+					1024: {
+						slidesPerView: 3, // Show 3 slides on desktop
+						spaceBetween: 30,
+					},
+					// when window width is >= 768px
+					768: {
+						slidesPerView: 2, // Show 2 slides on tablets
+						spaceBetween: 20,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 1, // Show 1 slide on mobile
+						spaceBetween: 10,
+					},
+				},
 			});
 		</script>
 	</body>
