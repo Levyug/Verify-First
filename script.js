@@ -112,12 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			console.log(window.location.href);
 
 			const current = document.getElementsByClassName("active");
-			const children = current[0].children;
-			children[1].classList.add("hidden");
+			if (current) {
+				const children = current[0].children;
+				children[1].classList.add("hidden");
 
-			current[0].classList.remove("active");
-			this.classList.add("active");
-			this.children[1].classList.remove("hidden");
+				current[0].classList.remove("active");
+				this.classList.add("active");
+				this.children[1].classList.remove("hidden");
+			}
 		});
 	}
 });
