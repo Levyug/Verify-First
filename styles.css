@@ -390,12 +390,17 @@ body {
 }
 .image-section {
 	position: relative;
+	padding: 0;
+	display: flex;
+	justify-content: center;
 }
 .image-section + img {
 	/* width: 500px; */
 	object-fit: cover;
 	z-index: 1;
-	top: 8px;
+	padding-top: 20px;
+	top: -40px;
+	position: relative;
 	object-position: center;
 }
 .image-section #crown {
