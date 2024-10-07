@@ -102,19 +102,20 @@ links.keys().forEach((key) => {
 		document.getElementById(links.get(key)).children[1].classList.add("hidden");
 	}
 });
+document.addEventListener("DOMContentLoaded", () => {
+	const navlinks = document.getElementsByClassName("nav-link");
 
-const navlinks = document.getElementsByClassName("nav-link");
+	for (let i = 0; i < navlinks.length; i++) {
+		navlinks[i].addEventListener("click", function () {
+			console.log(window.location.href);
 
-for (let i = 0; i < navlinks.length; i++) {
-	navlinks[i].addEventListener("click", function () {
-		console.log(window.location.href);
+			const current = document.getElementsByClassName("active");
+			const children = current[0].children;
+			children[1].classList.add("hidden");
 
-		const current = document.getElementsByClassName("active");
-		const children = current[0].children;
-		children[1].classList.add("hidden");
-
-		current[0].classList.remove("active");
-		this.classList.add("active");
-		this.children[1].classList.remove("hidden");
-	});
-}
+			current[0].classList.remove("active");
+			this.classList.add("active");
+			this.children[1].classList.remove("hidden");
+		});
+	}
+});
