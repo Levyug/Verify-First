@@ -3,7 +3,7 @@ function toggleFAQ(faqNumber) {
 	const arrow = question.previousElementSibling.querySelector(".arrow");
 
 	question.classList.toggle("show");
-	arrow.textContent = question.classList.contains("show") ? "∧" : "∨";
+	arrow.textContent = question.classList.contains("show") ? "-" : "+";
 }
 
 // JavaScript for toggling the navigation bar on mobile view
