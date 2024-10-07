@@ -86,6 +86,7 @@ let homeActive = false;
 const currentUrl = window.location.href;
 links.keys().forEach((key) => {
 	if (currentUrl.endsWith(key)) {
+		console.log(window.location.href, key);
 		document.getElementById(links.get(key)).classList.add("active");
 		document
 			.getElementById(links.get(key))
@@ -106,6 +107,8 @@ const navlinks = document.getElementsByClassName("nav-link");
 
 for (let i = 0; i < navlinks.length; i++) {
 	navlinks[i].addEventListener("click", function () {
+		console.log(window.location.href);
+
 		const current = document.getElementsByClassName("active");
 		const children = current[0].children;
 		children[1].classList.add("hidden");
