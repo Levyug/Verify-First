@@ -84,6 +84,8 @@ links.set("contact", "contact");
 links.set("pricing", "pricing");
 let homeActive = false;
 const currentUrl = window.location.href;
+console.log(currentUrl);
+
 links.keys().forEach((key) => {
 	if (currentUrl.endsWith(key)) {
 		console.log(window.location.href, key);
