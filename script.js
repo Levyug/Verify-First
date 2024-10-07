@@ -81,6 +81,7 @@ links.set("home", "home");
 links.set("corporates", "corporates");
 links.set("contact", "contact");
 links.set("pricing", "pricing");
+let homeActive = false;
 const currentUrl = window.location.href;
 links.keys().forEach((key) => {
 	if (currentUrl.endsWith(key)) {
@@ -88,7 +89,13 @@ links.keys().forEach((key) => {
 		document
 			.getElementById(links.get(key))
 			.children[1].classList.remove("hidden");
+		if (links.get(key) === "home") {
+			homeActive = true;
+		}
 	} else {
+		if (links.get(key) === "home") {
+			return;
+		}
 		document.getElementById(links.get(key)).classList.remove("active");
 		document.getElementById(links.get(key)).children[1].classList.add("hidden");
 	}
