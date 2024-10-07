@@ -385,16 +385,23 @@ header {
 	font-size: 0.8 em;
 	color: #7691dd;
 }
-
-.image-section img {
+.image-section {
+	position: relative;
+}
+.image-section + img {
 	/* width: 500px; */
 	object-fit: cover;
 	z-index: 1;
 	top: 8px;
-	position: relative;
 	object-position: center;
 }
-
+.image-section #crown {
+	position: absolute;
+	left: 40%;
+	top: 40px;
+	width: 40px;
+	height: 40px;
+}
 @media (max-width: 768px) {
 	.image-section img {
 		width: 100%;
