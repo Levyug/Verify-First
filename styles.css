@@ -2081,3 +2081,35 @@ input[type="text"] {
 	object-position: center;
 	height: 100%;
 }
+.swiper-container {
+	width: 100%;
+	position: relative;
+	padding: 40px;
+	padding-top: 80px;
+	height: 600px;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Customizing navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+	color: #fff !important;
+	z-index: 20 !important;
+	background: #000 !important;
+	border-radius: 50% !important;
+	width: 25px !important; /* Adjust the width */
+	height: 25px !important; /* Adjust the height */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	font-size: 16px !important; /* Default is 20px, reduce for smaller arrow */
+}
+/* Custom pagination bullets */
+.swiper-pagination-bullet {
+	background-color: #fff;
+}
