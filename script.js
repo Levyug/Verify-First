@@ -108,9 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	const navlinks = document.getElementsByClassName("nav-link");
 
 	for (let i = 0; i < navlinks.length; i++) {
-		navlinks[i].addEventListener("click", function () {
-			console.log(window.location.href);
-
+		if (navLinks[i] && navLinks[i].children[0].innerHTML === "Services") {
+			continue;
+		}
+		navlinks[i].addEventListener("click", function (e) {
+			if (e.target && e.target.innerHTML.includes("Services")) {
+				this.removeEventListener("click", arguments.callee);
+				return;
+			}
 			const current = document.getElementsByClassName("active");
 			if (current) {
 				const children = current[0].children;
