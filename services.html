@@ -1,402 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Verify First</title>
+		<link
+			rel="stylesheet"
+			href="services.css"
+		/>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify First</title>
-    <link rel="stylesheet" href="services.css">
-</head>
+	<body>
+		<!-- Header Section -->
+		<header>
+			<nav class="navbar">
+				<div class="logo">
+					<img
+						src="img/logo.png"
+						alt="Logo"
+					/>
+				</div>
 
-<body>
+				<ul
+					class="nav-links"
+					id="nav-links"
+				>
+					<li
+						id="home"
+						class="nav-link"
+					>
+						<a href="#home">Home</a>
+						<svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+					<li
+						id="services-button"
+						class="services nav-link"
+					>
+						<a
+							href="#"
+							id="services-button"
+							>Services &#x25BE;</a
+						>
+						<svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+						<div class="dropdown">
+							<div class="dropdown-column">
+								<a
+									href="https://levyug.com/"
+									class="dropdown-item"
+									>Verify Employee<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Verify driver<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Nanny<br /><span>Mobile-Friendly Verifications</span></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Cook<br /><span>Mobile-Friendly Verifications</span></a
+								>
+							</div>
+							<div class="dropdown-column">
+								<a
+									href="#"
+									class="dropdown-item"
+									>Domestic helper<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Tenant<br /><span>Mobile-Friendly Verifications</span></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Gig worker<br /><span>Mobile-Friendly Verifications</span></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Verify driver<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+							</div>
+							<div class="dropdown-column">
+								<a
+									href="#"
+									class="dropdown-item"
+									>Matrimonial verification<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Health care verification<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+								<a
+									href="#"
+									class="dropdown-item"
+									>Any other profession<br /><span
+										>Mobile-Friendly Verifications</span
+									></a
+								>
+							</div>
+						</div>
+					</li>
+					<li
+						id="corporates"
+						class="nav-link"
+					>
+						<a href="#corporates">For Corporates</a>
+						<svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+					<li
+						id="contact"
+						class="nav-link"
+					>
+						<a href="#contact">Contact</a
+						><svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+					<li
+						id="pricing"
+						class="nav-link"
+					>
+						<a href="#pricing">Pricing</a
+						><svg
+							class="hidden"
+							height="6"
+							viewBox="0 0 32 6"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
+								fill="#EA5824"
+							/>
+						</svg>
+					</li>
+				</ul>
 
-    <!-- Header Section -->
-    <header>
-        <nav class="navbar">
-			<div class="logo">
+				<div class="cta-buttons">
+					<button class="login-button">Login</button>
+				</div>
+
+				<!-- Hamburger Menu -->
+				<div
+					class="hamburger"
+					id="hamburger"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Identity Check -->
+		<section class="identity-check">
+			<div class="container">
+				<div class="header">
+					<h4 class="service-label">Services</h4>
+					<h1>Identity check</h1>
+					<p>
+						To revolutionize the background verification and onboarding process
+						by providing innovative and reliable HR technology solutions that
+						streamline.
+					</p>
+					<button class="cta-button">Get Verified Now</button>
+				</div>
+				<div class="illustration">
+					<img
+						src="img/Identity Check.png"
+						alt="Verification illustration"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quickly Verify House Help -->
+		<section class="process-features">
+			<div class="container">
+				<h4 class="process-label">Process</h4>
+				<h2>Quickly Verify House Help</h2>
+
+				<p>
+					To revolutionize the background verification and onboarding process by
+					providing innovative and reliable HR technology solutions that
+					streamline the hiring process for employers and ensure the privacy and
+					security of candidate information.
+				</p>
+
+				<div class="features">
+					<div class="feature-box">
+						<img
+							src="img/services/contact_mail.svg"
+							alt="Verification"
+						/>
+						<h3>Faster Verification</h3>
+						<p>
+							No more delays in gig worker verifications. Authenticate your gig
+							workers in record time with our instant verification APIs that
+							integrate into your application.
+						</p>
+					</div>
+					<div class="feature-box">
+						<img
+							src="img/services/contact_mail.svg"
+							alt="Verification"
+						/>
+						<h3>Eliminate Fraud</h3>
+						<p>
+							Identify impersonation or other identity theft risks with
+							extensive databases and real-time checks to mitigate any
+							reputational risks.
+						</p>
+					</div>
+					<div class="feature-box">
+						<img
+							src="img/services/contact_mail.svg"
+							alt="Verification"
+						/>
+						<h3>Verification Flow</h3>
+						<p>
+							End-to-end automation of your gig-worker verification. From
+							assisted document collection to verification – onboard and verify
+							your workforce faster.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Fast Screen Process -->
+		<div class="image-only">
+			<img
+				src="img/How it works 2.png"
+				alt="Desktop Version"
+				class="desktop-image"
+			/>
+			<img
+				src="img/How it works 2.png"
+				alt="Mobile Version"
+				class="mobile-image"
+			/>
+		</div>
+
+		<!-- House Help Verification -->
+		<section class="process-features">
+			<div class="container">
+				<h4 class="process-label">Process</h4>
+				<h2>House Help Verification</h2>
+
+				<p>
+					To revolutionize the background verification and onboarding process by
+					providing innovative and reliable HR technology solutions that
+					streamline the hiring process for employers and ensure the privacy and
+					security of candidate information.
+				</p>
+
+				<div class="features">
+					<div class="feature-box">
+						<img
+							src="img/services/contact_mail.svg"
+							alt="Verification"
+						/>
+						<h3>Aadhar Check</h3>
+						<p>We verify the adhaar of the candidate for autheticity.</p>
+					</div>
+					<div class="feature-box">
+						<img
+							src="img/services/contact_mail.svg"
+							alt="Verification"
+						/>
+						<h3>Current Address</h3>
+						<p>We verify the current address of the worker for authenticity.</p>
+					</div>
+					<div class="feature-box">
+						<img
+							src="img/services/contact_mail.svg"
+							alt="Verification"
+						/>
+						<h3>Professional Reference</h3>
+						<p>We check the references given by the worker</p>
+					</div>
+					<div class="background-icons"></div>
+					<img
+						src="img/rocket.png"
+						alt="Rocket Icon"
+						class="icon rocket-icon"
+					/>
+					<img
+						src="img/thunder.png"
+						alt="Thunder Icon"
+						class="icon thunder-icon"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Try it Free -->
+		<section class="content-section">
+			<div class="image-container">
 				<img
-					src="img/logo.png"
-					alt="Logo"
+					src="img/Try it free.png"
+					alt="Sample Image"
 				/>
 			</div>
+			<div class="text-container">
+				<h2>Try it free</h2>
+				<p>
+					If you've made it this far, you must be at least a little curious.
+					connect and take the first step toward your goals.
+				</p>
+			</div>
+		</section>
 
-			<ul
-				class="nav-links"
-				id="nav-links"
-			>
-				<li
-					id="home"
-					class="nav-link"
-				>
-					<a href="#home">Home</a>
-					<svg
-						class="hidden"
-						height="6"
-						viewBox="0 0 32 6"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
-							fill="#EA5824"
+		<!-- Contact Us Form -->
+		<section class="contact">
+			<div class="contact-box">
+				<h2>Contact Us</h2>
+				<h3>Ready To Explore Verify First</h3>
+				<form class="contact-form">
+					<div class="form-group">
+						<label for="name">Name*</label>
+						<input
+							type="text"
+							id="name"
+							placeholder="Enter your name"
+							required
 						/>
-					</svg>
-				</li>
-				<li
-					id="services-button"
-					class="services nav-link"
-				>
-					<a
-						href="#"
-						id="services-button"
-						>Services &#x25BE;</a
-					>
-					<svg
-						class="hidden"
-						height="6"
-						viewBox="0 0 32 6"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
-							fill="#EA5824"
-						/>
-					</svg>
-					<div class="dropdown">
-						<div class="dropdown-column">
-							<a
-								href="https://levyug.com/"
-								class="dropdown-item"
-								>Verify Employee<br /><span
-									>Mobile-Friendly Verifications</span
-								></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Verify driver<br /><span
-									>Mobile-Friendly Verifications</span
-								></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Nanny<br /><span>Mobile-Friendly Verifications</span></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Cook<br /><span>Mobile-Friendly Verifications</span></a
-							>
-						</div>
-						<div class="dropdown-column">
-							<a
-								href="#"
-								class="dropdown-item"
-								>Domestic helper<br /><span
-									>Mobile-Friendly Verifications</span
-								></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Tenant<br /><span>Mobile-Friendly Verifications</span></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Gig worker<br /><span>Mobile-Friendly Verifications</span></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Verify driver<br /><span
-									>Mobile-Friendly Verifications</span
-								></a
-							>
-						</div>
-						<div class="dropdown-column">
-							<a
-								href="#"
-								class="dropdown-item"
-								>Matrimonial verification<br /><span
-									>Mobile-Friendly Verifications</span
-								></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Health care verification<br /><span
-									>Mobile-Friendly Verifications</span
-								></a
-							>
-							<a
-								href="#"
-								class="dropdown-item"
-								>Any other profession<br /><span
-									>Mobile-Friendly Verifications</span
-								></a
-							>
-						</div>
 					</div>
-				</li>
-				<li
-					id="corporates"
-					class="nav-link"
-				>
-					<a href="#corporates">For Corporates</a>
-					<svg
-						class="hidden"
-						height="6"
-						viewBox="0 0 32 6"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
-							fill="#EA5824"
+					<div class="form-group">
+						<label for="mobile">Mobile No*</label>
+						<input
+							type="tel"
+							id="mobile"
+							placeholder="+91 92849-20292"
+							required
 						/>
-					</svg>
-				</li>
-				<li
-					id="contact"
-					class="nav-link"
-				>
-					<a href="#contact">Contact</a
-					><svg
-						class="hidden"
-						height="6"
-						viewBox="0 0 32 6"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
-							fill="#EA5824"
+					</div>
+					<div class="form-group">
+						<label for="email">Email*</label>
+						<input
+							type="email"
+							id="email"
+							placeholder="example@gmail.com"
+							required
 						/>
-					</svg>
-				</li>
-				<li
-					id="pricing"
-					class="nav-link"
-				>
-					<a href="#pricing">Pricing</a
-					><svg
-						class="hidden"
-						height="6"
-						viewBox="0 0 32 6"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
+					</div>
+					<div class="form-group">
+						<label for="message">Your Message*</label>
+						<textarea
+							id="message"
+							rows="4"
+							placeholder="Type your message here"
+							required
+						></textarea>
+					</div>
+					<button
+						type="submit"
+						class="submit-btn"
 					>
-						<path
-							d="M0.763392 0.729531C0.921537 0.638226 1.10468 0.586641 1.29926 0.586922C3.20963 0.58867 4.20027 1.5444 4.99648 2.31234C5.67349 2.96599 6.16292 3.43909 7.21188 3.43955C8.26115 3.44069 8.75176 2.96915 9.4329 2.31627C10.2333 1.54898 11.2275 0.595873 13.1378 0.597622C15.0477 0.599668 16.0372 1.55518 16.8329 2.32342C17.5099 2.97703 17.9989 3.44952 19.0467 3.45069C20.0938 3.45219 20.5862 2.97967 21.2667 2.32802C22.0652 1.56095 23.0593 0.607031 24.9701 0.608518C26.8799 0.610564 27.8699 1.5667 28.6652 2.3343C29.3422 2.98795 29.8312 3.4604 30.8789 3.4616C31.4692 3.46211 31.9465 3.94047 31.9452 4.53011C31.9437 5.12069 31.4623 5.59812 30.8745 5.59706C28.9646 5.59501 27.9747 4.63887 27.1794 3.87127C26.5024 3.21763 26.0133 2.74518 24.9656 2.74397C23.9163 2.74287 23.4245 3.2151 22.746 3.86728C21.9463 4.63416 20.9515 5.58769 19.0422 5.58614C17.1324 5.5841 16.1425 4.62797 15.3471 3.86038C14.6697 3.20612 14.1811 2.73427 13.1333 2.7331C12.0844 2.7326 11.5931 3.20285 10.912 3.85652C10.1124 4.62337 9.11754 5.57688 7.20717 5.57513C5.29681 5.57338 4.30611 4.61771 3.51022 3.84958C2.83251 3.19547 2.34346 2.72302 1.29456 2.72253C0.703934 2.72137 0.227244 2.24349 0.228175 1.65321C0.229452 1.25873 0.444067 0.913893 0.763392 0.729531Z"
-							fill="#EA5824"
-						/>
-					</svg>
-				</li>
-			</ul>
-
-			<div class="cta-buttons">
-				<button class="login-button">Login</button>
+						Submit
+					</button>
+				</form>
 			</div>
+		</section>
 
-			<!-- Hamburger Menu -->
-			<div
-				class="hamburger"
-				id="hamburger"
-			>
-				<span></span>
-				<span></span>
-				<span></span>
+		<!-- Footer Section -->
+		<footer class="footer">
+			<div class="footer-container">
+				<!-- Left Side - Logo and Description -->
+				<div class="footer-left">
+					<img
+						src="img/logo.png"
+						alt="Verify First Logo"
+						class="footer-logo"
+					/>
+					<p class="footer-desc">
+						If you've made it this far, you must be at least a little curious.
+						Connect and take the first step toward your goals.
+					</p>
+
+					<div class="footer-social-icons">
+						<a href="#"
+							><img
+								src="img/footer/facebook.png"
+								alt="Facebook"
+						/></a>
+						<a href="#"
+							><img
+								src="img/footer/twitter.png"
+								alt="Twitter"
+						/></a>
+						<a href="#"
+							><img
+								src="img/footer/youtube.png"
+								alt="YouTube"
+						/></a>
+						<a href="#"
+							><img
+								src="img/footer/dribble.png"
+								alt="Dribbble"
+						/></a>
+					</div>
+				</div>
+
+				<!-- Center - Web Links -->
+				<div class="footer-center">
+					<h3>Web Links</h3>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+					</ul>
+				</div>
+
+				<!-- Right Side - Address and Contact Info -->
+				<div class="footer-right">
+					<h3>Address</h3>
+					<p>243 Vipul Trade Centre, Sector 48, Gurgaon, HR 122018, India</p>
+					<p>
+						<a
+							href="mailto:info@verifyfirst.com"
+							class="email"
+							><img
+								src="img/footer/mail.png"
+								alt="Email"
+							/>
+							info@verifyfirst.com</a
+						>
+					</p>
+					<p>
+						<a
+							href="tel:+91-769942478"
+							class="support"
+							><img
+								src="img/footer/phone.png"
+								alt="Phone"
+							/>
+							+91 76990-42478</a
+						>
+					</p>
+					<p>
+						<a
+							href="mailto:support@verifynow.com"
+							class="support"
+							><img
+								src="img/footer/mail.png"
+								alt="Support"
+							/>
+							support@verifynow.com</a
+						>
+					</p>
+				</div>
 			</div>
-		</nav>
-    </header>
+		</footer>
 
-    <!-- Identity Check -->
-    <section class="identity-check">
-        <div class="container">
-
-            <div class="header">
-                <h4 class="service-label">Services</h4>
-                <h1>Identity check</h1>
-                <p>To revolutionize the background verification and onboarding process by providing innovative and
-                    reliable HR technology solutions that streamline.</p>
-                <button class="cta-button">Get Verified Now</button>
-            </div>
-            <div class="illustration">
-                <img src="img/Identity Check.png" alt="Verification illustration">
-            </div>
-        </div>
-    </section>
-
-    <!-- Quickly Verify House Help -->
-    <section class="process-features">
-        <div class="container">
-            <h4 class="process-label">Process</h4>
-            <h2>Quickly Verify House Help</h2>
-
-            <p>To revolutionize the background verification and onboarding process by providing innovative and reliable
-                HR technology solutions that streamline the hiring process for employers and ensure the privacy and
-                security of candidate information.</p>
-
-            <div class="features">
-                <div class="feature-box">
-                    <img src="img/services/contact_mail.svg" alt="Verification">
-                    <h3>Faster Verification</h3>
-                    <p>No more delays in gig worker verifications. Authenticate your gig workers in record time with our
-                        instant verification APIs that integrate into your application.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="img/services/contact_mail.svg" alt="Verification">
-                    <h3>Eliminate Fraud</h3>
-                    <p>Identify impersonation or other identity theft risks with extensive databases and real-time
-                        checks to mitigate any reputational risks.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="img/services/contact_mail.svg" alt="Verification">
-                    <h3>Verification Flow</h3>
-                    <p>End-to-end automation of your gig-worker verification. From assisted document collection to
-                        verification – onboard and verify your workforce faster.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fast Screen Process -->
-    <div class="image-only">
-        <img src="img/How it works 2.png" alt="Desktop Version" class="desktop-image">
-        <img src="img/How it works 2.png" alt="Mobile Version" class="mobile-image">
-    </div>
-
-    <!-- House Help Verification -->
-    <section class="process-features">
-        <div class="container">
-            <h4 class="process-label">Process</h4>
-            <h2>House Help Verification</h2>
-
-            <p>To revolutionize the background verification and onboarding process by providing innovative and reliable
-                HR technology solutions that streamline the hiring process for employers and ensure the privacy and
-                security of candidate information.</p>
-
-            <div class="features">
-                <div class="feature-box">
-                    <img src="img/services/contact_mail.svg" alt="Verification">
-                    <h3>Aadhar Check</h3>
-                    <p>We verify the adhaar of the candidate for autheticity.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="img/services/contact_mail.svg" alt="Verification">
-                    <h3>Current Address</h3>
-                    <p>We verify the current address of the worker for authenticity.</p>
-                </div>
-                <div class="feature-box">
-                    <img src="img/services/contact_mail.svg" alt="Verification">
-                    <h3>Professional Reference</h3>
-                    <p>We check the references given by the worker</p>
-                </div>
-                <div class="background-icons"></div>
-                <img src="img/rocket.png" alt="Rocket Icon" class="icon rocket-icon">
-                <img src="img/thunder.png" alt="Thunder Icon" class="icon thunder-icon">
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Try it Free -->
-    <section class="content-section">
-        <div class="image-container">
-            <img src="img/Try it free.png" alt="Sample Image">
-        </div>
-        <div class="text-container">
-            <h2>Try it free</h2>
-            <p>
-                If you've made it this far, you must be at least
-                a little curious. connect and take the first step
-                toward your goals.
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Us Form -->
-    <section class="contact">
-        <div class="contact-box">
-            <h2>Contact Us</h2>
-            <h3>Ready To Explore Verify First</h3>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name*</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="mobile">Mobile No*</label>
-                    <input type="tel" id="mobile" placeholder="+91 92849-20292" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" placeholder="example@gmail.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message*</label>
-                    <textarea id="message" rows="4" placeholder="Type your message here" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-container">
-
-            <!-- Left Side - Logo and Description -->
-            <div class="footer-left">
-                <img src="img/logo.png" alt="Verify First Logo" class="footer-logo">
-                <p class="footer-desc">If you've made it this far, you must be at least a little curious. Connect and
-                    take the first step toward your goals.</p>
-
-                <div class="footer-social-icons">
-                    <a href="#"><img src="img/footer/facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="img/footer/twitter.png" alt="Twitter"></a>
-                    <a href="#"><img src="img/footer/youtube.png" alt="YouTube"></a>
-                    <a href="#"><img src="img/footer/dribble.png" alt="Dribbble"></a>
-                </div>
-            </div>
-
-            <!-- Center - Web Links -->
-            <div class="footer-center">
-                <h3>Web Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <!-- Right Side - Address and Contact Info -->
-            <div class="footer-right">
-                <h3>Address</h3>
-                <p>243 Vipul Trade Centre, Sector 48, Gurgaon, HR 122018, India</p>
-                <p><a href="mailto:info@verifyfirst.com" class="email"><img src="img/footer/mail.png" alt="Email">
-                        info@verifyfirst.com</a></p>
-                <p><a href="tel:+91-769942478" class="support"><img src="img/footer/phone.png" alt="Phone"> +91
-                        76990-42478</a>
-                </p>
-                <p><a href="mailto:support@verifynow.com" class="support"><img src="img/footer/mail.png" alt="Support">
-                        support@verifynow.com</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="footer-bottom">
-        <p>&copy; 2024 Levyug Pvt Ltd. All Rights Reserved</p>
-    </div>
-    <script src="script.js"></script>
-    <script src="services_drop_down.js"></script>   
-</body>
-
+		<div class="footer-bottom">
+			<p>&copy; 2024 Levyug Pvt Ltd. All Rights Reserved</p>
+		</div>
+		<script src="script.js"></script>
+		<script src="services_drop_down.js"></script>
+	</body>
 </html>
