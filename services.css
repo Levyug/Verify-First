@@ -30,6 +30,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
+	z-index: 20;
 	background-color: #fff;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	position: fixed;
@@ -213,7 +214,11 @@ header {
 	width: 100%; /* Ensure it spans the full width of the container */
 	margin-bottom: 30px;
 }
-
+.identity-check {
+	position: relative;
+	top: 40px;
+	z-index: 0;
+}
 .identity-check .container {
 	display: flex;
 	flex-wrap: nowrap; /* Keep elements side by side */
@@ -600,7 +605,6 @@ header {
 	font-size: 28px;
 	font-weight: bold;
 	margin-top: 10px;
-	font-family: "Tahoma", "Verdana", sans-serif;
 }
 
 .contact-form {
@@ -675,7 +679,6 @@ header {
 
 /* General Styling */
 body {
-	font-family: "Arial", sans-serif;
 	margin: 0;
 	padding: 0;
 	background-color: #f7f7f7;
