@@ -71,10 +71,21 @@
 	background: #fff29e;
 	transform: rotate(-10deg);
 	position: relative;
+	top: -10%;
 	left: 30%;
 }
 .card3 {
 	background-image: url("img/step3.png");
+	position: relative;
+	top: -10%;
+}
+.card4 {
+	background-image: url("img/image1.png");
+	position: relative;
+	color: white;
+	transform: rotate(10deg);
+	top: -20%;
+	right: -30%;
 }
 .card #stepText {
 	color: #ea5824;
@@ -87,7 +98,9 @@
 .card ul {
 	padding-left: 30px;
 }
-
+.card4 h2 {
+	font-size: 22px !important;
+}
 @media (max-width: 768px) {
 	.htw-image-div #main_bg_htw {
 		width: 100%;
@@ -135,6 +148,11 @@
 	}
 	.card3 {
 		background-image: url("img/step3.png");
+	}
+	.card4 {
+		transform: rotate(0deg) !important;
+		right: 0%;
+		margin-bottom: 20px;
 	}
 	.how-it-works {
 		min-height: 100vh;
