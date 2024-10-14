@@ -592,7 +592,7 @@ input[type="text"] {
 		top: 380px;
 		right: 20%;
 		left: auto;
-		width: 200px;
+		width: 1000px;
 	}
 
 	.facial-verification {
@@ -1693,7 +1693,7 @@ input[type="text"] {
 		width: 100%;
 	}
 	#lightninggroup {
-		left: 20%;
+		left: 60%;
 	}
 }
 
@@ -1897,6 +1897,7 @@ input[type="text"] {
 		background-color: #ffffff;
 		padding: 10px;
 		border-radius: 10px;
+		font-size: 15px;
 		text-align: center;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		height: 70%;
