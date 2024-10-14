@@ -78,15 +78,17 @@ const links = new Map();
 
 links.set("/", "home");
 links.set("index.html", "home");
+links.set("services.html", "home");
 links.set("home", "home");
 links.set("corporates", "corporates");
 links.set("contact", "contact");
 links.set("pricing", "pricing");
 let homeActive = false;
-const currentUrl = window.location.href;
+let currentUrl = window.location.href;
 console.log(currentUrl);
 
 links.keys().forEach((key) => {
+	currentUrl = window.location.href;
 	if (currentUrl.endsWith(key)) {
 		console.log(window.location.href, key);
 		document.getElementById(links.get(key)).classList.add("active");
@@ -118,7 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 			const current = document.getElementsByClassName("active");
 			if (current) {
-				const children = current[0].children;
+				console.log(current);
+				const children = current[0]?.children;
 				children[1].classList.add("hidden");
 
 				current[0].classList.remove("active");
