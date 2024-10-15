@@ -436,7 +436,7 @@ body {
 	border-radius: 35px;
 	padding: 25px 10px 20px 10px;
 	display: inline-block;
-	height: 700px;
+	height: 570px;
 }
 
 .phone {
@@ -582,7 +582,7 @@ input[type="text"] {
 	}
 
 	.credit-check {
-		top: 40%;
+		top: 100px;
 		left: 20%;
 		right: auto;
 		width: 95px;
@@ -590,16 +590,16 @@ input[type="text"] {
 
 	.quick-verification {
 		top: 380px;
-		right: 20%;
+		right: 5%;
 		left: auto;
-		width: 1000px;
+		width: 800px;
 	}
 
 	.facial-verification {
-		top: 60%;
-		left: 25%;
-		right: auto;
-		width: 180px;
+		top: 90%;
+		left: 20%;
+		right: 30%;
+		width: 100px;
 	}
 
 	.instant-verification {
@@ -764,7 +764,6 @@ input[type="text"] {
 }
 @media (max-width: 768px) {
 	.image-only2 {
-		margin-top: -30%;
 		position: relative;
 		padding: 0px;
 	}
@@ -775,24 +774,33 @@ input[type="text"] {
 	}
 	.tenant-text h1 {
 		/* display: none; */
-		font-size: 20px;
+		font-size: 13px;
 		margin-left: 0%;
 		text-align: center;
-		top: 0;
+		top: -20px;
 	}
 	.tenant-text {
 		display: block;
 		margin: 0 auto;
 		position: relative;
-		top: 145px;
+		top: 90px;
 		max-width: 200px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		left: 20px;
+		left: 10px;
 	}
-	.tenant-text button {
+	.login-button-white {
+        width: 100px;
+        height: 20px;
+        margin-top: 12px;
+        margin-left: 20px;
+        text-align: center;
+        font-size: 5px;
+        padding: 0;
 	}
+
+
 }
 /* Why choose Verify First */
 .why-choose-section {
