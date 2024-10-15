@@ -764,7 +764,7 @@ input[type="text"] {
 }
 @media (max-width: 768px) {
 	.image-only2 {
-		margin-top: -25%;
+		margin-top: -30%;
 		position: relative;
 		padding: 0px;
 	}
