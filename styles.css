@@ -764,7 +764,7 @@ input[type="text"] {
 }
 @media (max-width: 768px) {
 	.image-only2 {
-		margin-top: 0%;
+		margin-top: -25%;
 		position: relative;
 		padding: 0px;
 	}
@@ -784,11 +784,12 @@ input[type="text"] {
 		display: block;
 		margin: 0 auto;
 		position: relative;
-		top: 200px;
+		top: 145px;
+		max-width: 200px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		left: 60px;
+		left: 20px;
 	}
 	.tenant-text button {
 	}
