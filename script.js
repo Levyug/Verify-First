@@ -10,6 +10,20 @@ function toggleFAQ(faqNumber) {
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
+const removeSidebarOnBodyClick = (e) => {
+	const tagName = e.target.tagName;
+
+	if (tagName !== "ASIDE" && tagName !== "SPAN") {
+		const element = document.querySelector(".sidebar");
+		const curr = element.getAttribute("open");
+		if (curr === "open") {
+			element.style.transform = "translateX(-100%)";
+			element.setAttribute("open", "closed");
+			document.body.removeEventListener("click", removeSidebarOnBodyClick);
+		}
+	}
+};
+
 hamburger.addEventListener("click", () => {
 	// navLinks.classList.toggle("active");
 	const element = document.querySelector(".sidebar");
@@ -17,12 +31,15 @@ hamburger.addEventListener("click", () => {
 	if (!curr) {
 		element.style.transform = "translateX(0px)";
 		element.setAttribute("open", "open");
+		document.body.addEventListener("click", removeSidebarOnBodyClick);
 	} else {
 		if (curr === "open") {
 			element.style.transform = "translateX(-100%)";
 			element.setAttribute("open", "closed");
+			document.body.removeEventListener("click", removeSidebarOnBodyClick);
 		} else {
 			element.style.transform = "translateX(0px)";
+			document.body.addEventListener("click", removeSidebarOnBodyClick);
 			element.setAttribute("open", "open");
 		}
 	}
